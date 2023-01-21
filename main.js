@@ -59,6 +59,7 @@ function drawImage() {
         .attr("cy", CaterPillarY + 310)
         .attr("rx", 30)
         .attr("ry", 30)
+        /*the following hex code is for a dark green color*/
         .attr("fill", "#5DB87D");
 
     let BugBody2 = drawing.append('ellipse')
@@ -75,6 +76,8 @@ function drawImage() {
         .attr("cy", CaterPillarY + 310)
         .attr("rx", 30)
         .attr("ry", 30)
+        /*the following hex code is for a dark green color*/
+
         .attr("fill", "#5DB87D");
 
     let BugBody4 = drawing.append('ellipse')
@@ -90,6 +93,7 @@ function drawImage() {
         .attr("cy", CaterPillarY + 270)
         .attr("rx", 30)
         .attr("ry", 30)
+        /*the following hex code is for a dark green color*/
         .attr("fill", "#5DB87D");
 
     let BugBody6 = drawing.append('ellipse')
@@ -105,6 +109,7 @@ function drawImage() {
         .attr("cy", CaterPillarY + 315)
         .attr("rx", 30)
         .attr("ry", 30)
+        /*the following hex code is for a dark green color*/
         .attr("fill", "#5DB87D");
 
     let BugBody8 = drawing.append('ellipse')
@@ -120,6 +125,7 @@ function drawImage() {
         .attr("cy", CaterPillarY + 280)
         .attr("rx", 15)
         .attr("ry", 15)
+        /*the following hex code is for a dark green color*/
         .attr("fill", "#5DB87D");
 
 
@@ -189,65 +195,65 @@ function drawImage() {
 
     /*bottom wing component*/
     let BottomWingLeft = drawing.append('polyline')
-        .attr("points", closedPolygon(200, 100, 200, 200, 150, 100))
+        .attr("points", closedPolygon(ButterFlyX + 200, ButterFlyY + 100, ButterFlyX + 200, ButterFlyY + 200, ButterFlyX + 150, ButterFlyY + 100))
         .attr("transform", "translate(170,20)")
         /*the following hexcode is the closest orange I could find to the original drawing*/
         .attr("fill", "#F88D53");
 
     let BottomWingRight = drawing.append('polyline')
-        .attr("points", closedPolygon(100, 200, 150, 100, 100, 100))
+        .attr("points", closedPolygon(ButterFlyX + 100, ButterFlyY + 200, ButterFlyX + 150, ButterFlyY + 100, ButterFlyX + 100, ButterFlyY + 100))
         .attr("transform", "translate(280,20)")
         /*the following hexcode is the closest color I could find to the original drawing*/
         .attr("fill", "#F88D53");
 
     /*top wing component*/
     let TopWingRight = drawing.append('polyline')
-        .attr("points", closedPolygon(350, 320, 300, 250, 264, 348))
-        .attr("transform", "translate(110,-232)")
+        .attr("points", closedPolygon(ButterFlyX + 350, ButterFlyY + 330, ButterFlyX + 320, ButterFlyY + 260, ButterFlyX + 265, ButterFlyY + 350))
+        .attr("transform", "translate(110,-235)")
         .attr("fill", "yellow");
 
     let TopWingLeft = drawing.append('polyline')
-        .attr("points", closedPolygon(250, 332, 350, 350, 300, 264))
-        .attr("transform", "translate(25,-235.5)")
+        .attr("points", closedPolygon(ButterFlyX + 250, ButterFlyY + 330, ButterFlyX + 350, ButterFlyY + 350, ButterFlyX + 300, ButterFlyY + 270))
+        .attr("transform", "translate(25,-235)")
         .attr("fill", "yellow");
 
 
     /*butterfly body component*/
     let ButterflyBody = drawing.append('rect')
-        .attr("x", 370)
-        .attr("y", 60)
+        .attr("x", ButterFlyX + 370)
+        .attr("y", ButterFlyY + 60)
         .attr("width", 10)
         .attr("height", 150)
         .attr("fill", "lightgreen");
 
     /*butterfly antennae*/
     let ButterflyAntennaLeft = drawing.append('line')
-        .attr("x1", 350)
-        .attr("y1", 25)
-        .attr("x2", 365)
-        .attr("y2", 50)
+        .attr("x1", ButterFlyX + 350)
+        .attr("y1", ButterFlyY + 25)
+        .attr("x2", ButterFlyX + 365)
+        .attr("y2", ButterFlyY + 50)
         .attr("stroke", "black")
         .attr('stroke-width', .75);
 
     let ButterflyAntennaRight = drawing.append('line')
-        .attr("x1", 400)
-        .attr("y1", 25)
-        .attr("x2", 385)
-        .attr("y2", 50)
+        .attr("x1", ButterFlyX + 400)
+        .attr("y1", ButterFlyY + 25)
+        .attr("x2", ButterFlyX + 385)
+        .attr("y2", ButterFlyY + 50)
         .attr("stroke", "black")
         .attr('stroke-width', .75);
 
     /*butterfly eyes*/
     let ButterflyEyeLeft = drawing.append('ellipse')
-        .attr("cx", 365)
-        .attr("cy", 60)
+        .attr("cx", ButterFlyX + 365)
+        .attr("cy", ButterFlyY + 60)
         .attr("rx", 10)
         .attr("ry", 10)
         .attr("fill", "red");
 
     let ButterflyEyeRight = drawing.append('ellipse')
-        .attr("cx", 385)
-        .attr("cy", 60)
+        .attr("cx", ButterFlyX + 385)
+        .attr("cy", ButterFlyY + 60)
         .attr("rx", 10)
         .attr("ry", 10)
         .attr("fill", "red");
