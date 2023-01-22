@@ -46,6 +46,9 @@ function drawImage() {
 
     /*bugs head component*/
     let BugHead = drawing.append('ellipse')
+        /*using the previous coordinate positions of our cartoon I added the value of the user's inputs (X,Y)
+       to each coordinate value of the caterpillar's body, so they all move equidistantly based on a user's input.
+       I think there's a more efficient way but couldn't find a breakthrough in that approach*/
         .attr("cx", CaterPillarX + 80)
         .attr("cy", CaterPillarY + 295)
         .attr("rx", 30)
@@ -195,6 +198,9 @@ function drawImage() {
 
     /*bottom wing component*/
     let BottomWingLeft = drawing.append('polyline')
+        /*using the previous coordinate positions of our cartoon I added the value of the user's inputs (X,Y)
+        to each coordinate value of the butterfly's body, so they all move equidistantly based on a user's input.
+         I landed on a guess here that each of these 6 numbers were grouped as X,Y coordinates - luckily my bet was right*/
         .attr("points", closedPolygon(ButterFlyX + 200, ButterFlyY + 100, ButterFlyX + 200, ButterFlyY + 200, ButterFlyX + 150, ButterFlyY + 100))
         .attr("transform", "translate(170,20)")
         /*the following hexcode is the closest orange I could find to the original drawing*/
